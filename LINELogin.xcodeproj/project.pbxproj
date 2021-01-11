@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		776E0E9825ABE65200D11D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9625ABE65200D11D60 /* Main.storyboard */; };
 		776E0E9A25ABE65300D11D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9925ABE65300D11D60 /* Assets.xcassets */; };
 		776E0E9D25ABE65300D11D60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9B25ABE65300D11D60 /* LaunchScreen.storyboard */; };
+		A57B47E89B8D35E8C45880CB /* Pods_LINELogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8AC0D4A897C3CCF6F625B /* Pods_LINELogin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		776E0E9925ABE65300D11D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		776E0E9C25ABE65300D11D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776E0E9E25ABE65300D11D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAC8AC0D4A897C3CCF6F625B /* Pods_LINELogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LINELogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8C55BA75B7858C97FC0707C /* Pods-LINELogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINELogin.release.xcconfig"; path = "Target Support Files/Pods-LINELogin/Pods-LINELogin.release.xcconfig"; sourceTree = "<group>"; };
+		EFC3A85609F849C881DB52EB /* Pods-LINELogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINELogin.debug.xcconfig"; path = "Target Support Files/Pods-LINELogin/Pods-LINELogin.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A57B47E89B8D35E8C45880CB /* Pods_LINELogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				776E0E8F25ABE65200D11D60 /* LINELogin */,
 				776E0E8E25ABE65200D11D60 /* Products */,
+				C5BE863A5E089A9B5EE6A74B /* Pods */,
+				BF16693201FA2842897F6F30 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = LINELogin;
 			sourceTree = "<group>";
 		};
+		BF16693201FA2842897F6F30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAC8AC0D4A897C3CCF6F625B /* Pods_LINELogin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C5BE863A5E089A9B5EE6A74B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFC3A85609F849C881DB52EB /* Pods-LINELogin.debug.xcconfig */,
+				C8C55BA75B7858C97FC0707C /* Pods-LINELogin.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 776E0EA125ABE65300D11D60 /* Build configuration list for PBXNativeTarget "LINELogin" */;
 			buildPhases = (
+				5CA4F97B90640D5B7C2FECBA /* [CP] Check Pods Manifest.lock */,
 				776E0E8925ABE65200D11D60 /* Sources */,
 				776E0E8A25ABE65200D11D60 /* Frameworks */,
 				776E0E8B25ABE65200D11D60 /* Resources */,
+				3556399A1915483EF908CC6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +157,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3556399A1915483EF908CC6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LINELogin/Pods-LINELogin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LINELogin/Pods-LINELogin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LINELogin/Pods-LINELogin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA4F97B90640D5B7C2FECBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LINELogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		776E0E8925ABE65200D11D60 /* Sources */ = {
@@ -283,6 +351,7 @@
 		};
 		776E0EA225ABE65300D11D60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFC3A85609F849C881DB52EB /* Pods-LINELogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +371,7 @@
 		};
 		776E0EA325ABE65300D11D60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8C55BA75B7858C97FC0707C /* Pods-LINELogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
