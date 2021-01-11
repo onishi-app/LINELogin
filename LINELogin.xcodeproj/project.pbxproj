@@ -13,24 +13,9 @@
 		776E0E9825ABE65200D11D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9625ABE65200D11D60 /* Main.storyboard */; };
 		776E0E9A25ABE65300D11D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9925ABE65300D11D60 /* Assets.xcassets */; };
 		776E0E9D25ABE65300D11D60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 776E0E9B25ABE65300D11D60 /* LaunchScreen.storyboard */; };
-		776E0EA825ABF09900D11D60 /* LineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776E0EA725ABF09900D11D60 /* LineSDK.framework */; };
-		776E0EA925ABF09900D11D60 /* LineSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 776E0EA725ABF09900D11D60 /* LineSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77782D3225ABFEF300676D57 /* LineSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 776E0EA725ABF09900D11D60 /* LineSDK.framework */; };
 		A57B47E89B8D35E8C45880CB /* Pods_LINELogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8AC0D4A897C3CCF6F625B /* Pods_LINELogin.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		776E0EAA25ABF09900D11D60 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				776E0EA925ABF09900D11D60 /* LineSDK.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		776E0E8D25ABE65200D11D60 /* LINELogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LINELogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,7 +27,6 @@
 		776E0E9C25ABE65300D11D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		776E0E9E25ABE65300D11D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		776E0EA725ABF09900D11D60 /* LineSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LineSDK.framework; path = Carthage/Build/iOS/LineSDK.framework; sourceTree = "<group>"; };
-		776E0EAD25ABF8FA00D11D60 /* LINELogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LINELogin.entitlements; sourceTree = "<group>"; };
 		AAC8AC0D4A897C3CCF6F625B /* Pods_LINELogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LINELogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8C55BA75B7858C97FC0707C /* Pods-LINELogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINELogin.release.xcconfig"; path = "Target Support Files/Pods-LINELogin/Pods-LINELogin.release.xcconfig"; sourceTree = "<group>"; };
 		EFC3A85609F849C881DB52EB /* Pods-LINELogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LINELogin.debug.xcconfig"; path = "Target Support Files/Pods-LINELogin/Pods-LINELogin.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A57B47E89B8D35E8C45880CB /* Pods_LINELogin.framework in Frameworks */,
-				776E0EA825ABF09900D11D60 /* LineSDK.framework in Frameworks */,
+				77782D3225ABFEF300676D57 /* LineSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +66,6 @@
 		776E0E8F25ABE65200D11D60 /* LINELogin */ = {
 			isa = PBXGroup;
 			children = (
-				776E0EAD25ABF8FA00D11D60 /* LINELogin.entitlements */,
 				776E0E9025ABE65200D11D60 /* AppDelegate.swift */,
 				776E0E9225ABE65200D11D60 /* SceneDelegate.swift */,
 				776E0E9425ABE65200D11D60 /* ViewController.swift */,
@@ -124,8 +107,7 @@
 				776E0E8A25ABE65200D11D60 /* Frameworks */,
 				776E0E8B25ABE65200D11D60 /* Resources */,
 				3556399A1915483EF908CC6F /* [CP] Embed Pods Frameworks */,
-				776E0EAA25ABF09900D11D60 /* Embed Frameworks */,
-				776E0EAC25ABF28000D11D60 /* ShellScript */,
+				776E0EAC25ABF28000D11D60 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -221,7 +203,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		776E0EAC25ABF28000D11D60 /* ShellScript */ = {
+		776E0EAC25ABF28000D11D60 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,6 +213,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/LineSDK.framework",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
